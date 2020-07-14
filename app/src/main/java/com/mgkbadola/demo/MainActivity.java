@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void presentActivity(View view) {
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this, view, "transition");
-        int revealX = (int) (view.getX() + view.getWidth() / 2);
-        int revealY = (int) (view.getY() + view.getHeight() / 2);
+        int revealX = (int) (view.getX() + view.getWidth());
+        int revealY = (int) (view.getY() + view.getHeight());
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra(SecondActivity.EXTRA_CIRCULAR_REVEAL_X, revealX);
         intent.putExtra(SecondActivity.EXTRA_CIRCULAR_REVEAL_Y, revealY);
